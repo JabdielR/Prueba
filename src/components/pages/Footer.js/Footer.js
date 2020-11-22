@@ -53,8 +53,8 @@ function Footer() {
         </div>
         <div className='footer-link-wrapper'>
           <div className='footer-link-items'>
-            <h2>Comunidad</h2>
-            <Link to='/'>Colaborar</Link>
+            <h2>Aliados</h2>
+            <Link to='/https://www.youtube.com/channel/UCkZECHTELpjTt7L4mTgBhYw?view_as=subscriber' >Iegamar</Link>
             <Link to='/'>Github</Link>
             <Link to='/'>P.C.J.I.C</Link>
           </div>
@@ -95,9 +95,7 @@ function Footer() {
             </Link>
             <Link
               className='social-icon-link'
-              to={
-                'https://www.youtube.com/channel/UCkZECHTELpjTt7L4mTgBhYw?view_as=subscriber'
-              }
+              to={'https://www.youtube.com/channel/UCkZECHTELpjTt7L4mTgBhYw?view_as=subscriber'}
               target='_blank'
               aria-label='Youtube'
             >

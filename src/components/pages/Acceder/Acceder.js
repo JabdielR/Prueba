@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import './Form.css';
+import "./Form.css";
+import { GrSolaris } from 'react-icons/gr';
+import { Link } from 'react-router-dom';
 
 const emailRegex = RegExp(
   /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
@@ -21,7 +23,7 @@ const formValid = ({ formErrors, ...rest }) => {
   return valid;
 };
 
-class App extends Component {
+class Acceder extends Component {
   constructor(props) {
     super(props);
 
@@ -92,42 +94,14 @@ class App extends Component {
       
       <div className="wrapper">
         <div className="form-wrapper">
-          <h1>Crear una cuenta</h1>
-          <h1>BioSolar</h1>
+          <h1>Acceder</h1>
+           <h1> <GrSolaris /></h1><br />
           <form onSubmit={this.handleSubmit} noValidate>
-            <div className="firstName">
-              <label htmlFor="firstName">Nombre</label>
-              <input
-                className={formErrors.firstName.length > 0 ? "error" : null}
-                placeholder="Nombre"
-                type="text"
-                name="firstName"
-                noValidate
-                onChange={this.handleChange}
-              />
-              {formErrors.firstName.length > 0 && (
-                <span className="errorMessage">{formErrors.firstName}</span>
-              )}
-            </div>
-            <div className="lastName">
-              <label htmlFor="lastName">Apellido</label>
-              <input
-                className={formErrors.lastName.length > 0 ? "error" : null}
-                placeholder="Apellido"
-                type="text"
-                name="lastName"
-                noValidate
-                onChange={this.handleChange}
-              />
-              {formErrors.lastName.length > 0 && (
-                <span className="errorMessage">{formErrors.lastName}</span>
-              )}
-            </div>
             <div className="email">
-              <label htmlFor="email">Correo electrónico</label>
+              <label htmlFor="email">Correo o nombre de usuario</label>
               <input
                 className={formErrors.email.length > 0 ? "error" : null}
-                placeholder="Correo electrónico"
+                placeholder="Correo o nombre de usuario"
                 type="email"
                 name="email"
                 noValidate
@@ -151,23 +125,13 @@ class App extends Component {
                 <span className="errorMessage">{formErrors.password}</span>
               )}
             </div>
-            <div className="password">
-              <label htmlFor="password">Confirme su contraseña</label>
-              <input
-                className={formErrors.password.length > 0 ? "error" : null}
-                placeholder="Contraseña"
-                type="password"
-                name="password"
-                noValidate
-                onChange={this.handleChange}
-              />
-              {formErrors.password.length > 0 && (
-                <span className="errorMessage">{formErrors.password}</span>
-              )}
-            </div>
             <div className="createAccount">
-              <button type="submit">Crear cuenta</button>
-              <small>¿Ya tienes una cuenta?</small>
+              <button type="submit">Acceder</button>
+              <Link to='/registrate'>
+                <small>Crear cuenta</small>
+              </Link>
+              
+              
             </div>
           </form>
         </div>
@@ -176,4 +140,4 @@ class App extends Component {
   }
 }
 
-export default registerServiceWorker;
+export default Acceder;

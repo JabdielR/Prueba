@@ -63,13 +63,31 @@ function Navbar() {
                   Producto
                 </Link>
               </li>
+              <li className='nav-item'>
+                <Link
+                  to='/envio'
+                  className='nav-links'
+                  onClick={closeMobileMenu}
+                >
+                  Envio
+                </Link>
+              </li>
+              <li className='nav-item'>
+                <Link
+                  to='/acceder'
+                  className='nav-links'
+                  onClick={closeMobileMenu}
+                >
+                  Acceder
+                </Link>
+              </li>
               <li className='nav-btn'>
                 {button ? (
-                  <Link to='/sign-up' className='btn-link'>
+                  <Link to='/registrate' className='btn-link'>
                     <Button buttonStyle='btn--outline'>REGÍSTRATE</Button>
                   </Link>
                 ) : (
-                  <Link to='/sign-up' className='btn-link'>
+                  <Link to='/registrate' className='btn-link'>
                     <Button
                       buttonStyle='btn--outline'
                       buttonSize='btn--mobile'
